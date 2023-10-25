@@ -56,3 +56,12 @@ For a normal user the command is as follows:
 Install Network add-on to enable the communication between the pods using the command:
 	kubectl create -f https://docs.projectcalico.org/v3.15/manifests/calico.yaml
 
+Monitoring & Logging
+Install and setup Prometheus and Grafana on the logging & monitoring server.
+Install Prometheus node exporter in all K8S cluster node and setup the node exporter service.
+Configure Prometheus on the monitoring server to fetch scrapped metrics from the K8S cluster.
+Create a dashboard on Grafana for visualizing the data and notification alerts.
+To set up the Elastic Stack for analyzing logs, install and configure Elasticsearch, optimizing its settings for log data.
+Deploy Logstash for log data processing, creating pipelines to parse and standardize logs from K8S nodes, containers, and applications.
+Then, set up Kibana for log analysis and visualization. 
+Ingest K8S logs using Fluentd deploying it as DaemonSet within the cluster, and configure these shippers to forward logs either to Logstash or directly to Elasticsearch.
