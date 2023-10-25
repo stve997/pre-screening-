@@ -17,6 +17,8 @@ I will deploy 8 VMs with Ubuntu 22.04 as the base image. The VMs will be named a
 •	Load balancer1
 •	Load balancer2
 •	Logging & Monitoring server
+Make an entry of each host in /etc/hosts file for name resolution on all nodes.
+
 Security Configuration Setup:
 Use approved and secure base images. Do not use images from unknown sources. It is recommended to use minimal base images such as distroless images because package managers add unnecessary dependencies that could contain unknown vulnerabilities. Also ensure that images are up to date
 Harden the base image by disabling unnecessary services, applying security patches, and configuring a firewall.
